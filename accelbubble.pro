@@ -3,9 +3,9 @@ TEMPLATE = app
 QT += qml quick widgets
 QT += quick sensors svg xml
 
-SOURCES += src\main.cpp
+SOURCES += main.cpp
 
-RESOURCES += src\qml.qrc
+RESOURCES += qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
