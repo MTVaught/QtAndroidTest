@@ -5,8 +5,8 @@ import QtSensors 5.3
 
 ApplicationWindow {
     visible: true
-    x: 500
-    y: 500
+    width: 640
+    height: 500
     title: qsTr("Accelerate Bubble")
     id: mainWindow
 
@@ -24,6 +24,18 @@ ApplicationWindow {
         }
     }
 
+    Rectangle {
+        id: item1
+        color: "#cd0000"
+        anchors.rightMargin: 0
+        anchors.bottomMargin: 0
+        anchors.leftMargin: 0
+        anchors.topMargin: 0
+        transformOrigin: Item.Center
+        anchors.fill: parent
+
+    }
+
     Image {
         id: bubble
         source: "Bluebubble.svg"
@@ -31,20 +43,9 @@ ApplicationWindow {
         property real centerX: mainWindow.width / 2
         property real centerY: mainWindow.height / 2
         property real bubbleCenter: bubble.width / 2
-        x: centerX - bubbleCenter
-        y: centerY - bubbleCenter
-        Behavior on y{
-            SmoothedAnimation{
-                easing.type: Easing.Linear
-                duration: 100
-            }
-        }
-        Behavior on x{
-            SmoothedAnimation{
-                easing.type: Easing.Linear
-                duration: 100
-            }
-        }
+        x: 278
+        y: 208
+
 
         function setLoc(newX, newY){
             x = newX;
@@ -91,11 +92,13 @@ ApplicationWindow {
 
     Text {
         id: text1
-        x: 180
-        y: 66
-        width: 24
+        y: 261
+        width: 106
         height: 18
         text: qsTr("Magical Text Floating")
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
         font.pixelSize: 12
     }
+
 }
