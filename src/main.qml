@@ -5,7 +5,8 @@ import QtSensors 5.3
 
 ApplicationWindow {
     visible: true
-    x:
+    x: 500
+    y: 500
     title: qsTr("Accelerate Bubble")
     id: mainWindow
 
